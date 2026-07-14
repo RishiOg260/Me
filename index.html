@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Rishi Funde - Student, programmer, and JEE Advanced 2028 aspirant.">
+    <title>Rishi Funde | Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+    <div class="custom-cursor-dot" id="custom-cursor-dot" aria-hidden="true"></div>
+
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Rishi Funde</p>
+        </div>
+    </div>
+
+    <div class="aurora-container" aria-hidden="true">
+        <div class="aurora aurora-1"></div>
+        <div class="aurora aurora-2"></div>
+        <div class="aurora aurora-3"></div>
+    </div>
+
+    <header class="navbar">
+        <nav class="nav-container">
+            <a href="#hero" class="nav-logo" aria-label="Rishi Funde Home">RF</a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#goals" class="nav-link">Goals</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#connect" class="nav-link-btn">Connect</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-container reveal">
+                <div class="hero-badge">Student &amp; Aspiring Programmer</div>
+                <h1 class="hero-title">Rishi Funde</h1>
+                <p class="hero-subtitle"> PCM student and jee aspirant mapping out the future of technology while preparing for JEE Advanced 2028.</p>
+                <div class="hero-cta">
+                    <a href="#about" class="btn btn-primary">Discover My Journey</a>
+                    <a href="#connect" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="scroll-down-indicator" aria-hidden="true">
+                <span>Scroll to explore</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container reveal">
+                <h2 class="section-title">About Me</h2>
+                <div class="glass-card about-card">
+                    <p class="about-text">
+                        Hello! I am Rishi Funde, a PCM student and JEE aspirant passionate about science, technology, and programming. Based on my interest in how software operates, I started self-learning fundamentals of coding to prepare myself for the challenges ahead. 
+                    </p>
+                    <p class="about-text">
+                        Currently, I balance my school studies, competitive exam prep, and personal coding goals. I believe in learning by doing, mastering logical problem-solving, and continuously refining my skill set.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container reveal">
+                <h2 class="section-title">Education</h2>
+                <div class="education-grid">
+                    <div class="glass-card education-card">
+                        <div class="card-icon"><i class="fa-solid fa-school"></i></div>
+                        <span class="education-tag current">Current Academic Journey</span>
+                        <h3>Class 11 (PCM)</h3>
+                        <p class="edu-desc">Focusing on Physics, Chemistry, and Mathematics to build a razor-sharp analytical foundation.</p>
+                    </div>
+
+                    <div class="glass-card education-card">
+                        <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <span class="education-tag success">Completed</span>
+                        <h3>Class 10</h3>
+                        <p class="edu-desc">Achieved an aggregate score of <strong>89.6%</strong>, establishing strong academic fundamentals.</p>
+                    </div>
+
+                    <div class="glass-card education-card">
+                        <div class="card-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <span class="education-tag prep">JEE Prep</span>
+                        <h3>JEE Advanced 2028</h3>
+                        <p class="edu-desc">Actively preparing for the Joint Entrance Examination (Advanced) at <strong>Physics Wallah (PW)</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container reveal">
+                <h2 class="section-title">Skills &amp; Learning</h2>
+                <div class="skills-grid">
+                    <div class="glass-card skill-group-card">
+                        <h3 class="skill-group-title">Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML</span>
+                            <span class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                            <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-card skill-group-card highlight-border">
+                        <h3 class="skill-group-title">Currently Learning</h3>
+                        <div class="skill-tags">
+                            <span class="learning-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                            <span class="learning-tag"><i class="fa-solid fa-code"></i> Web Development</span>
+                            <span class="learning-tag"><i class="fa-solid fa-brain"></i> Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="goals" class="section">
+            <div class="container reveal">
+                <h2 class="section-title">Future Goals</h2>
+                <div class="goals-timeline">
+                    <div class="glass-card goal-card">
+                        <div class="goal-num">01</div>
+                        <h3>Crack JEE Advanced 2028</h3>
+                        <p>Perform exceptionally in JEE Advanced to gain admission into one of India's premier engineering institutions.</p>
+                    </div>
+                    <div class="glass-card goal-card">
+                        <div class="goal-num">02</div>
+                        <h3>Study Computer Science at IIT Bombay</h3>
+                        <p>Pursue a Bachelor's degree in Computer Science and Engineering from the legendary IIT Bombay.</p>
+                    </div>
+                    <div class="glass-card goal-card">
+                        <div class="goal-num">03</div>
+                        <h3>Keep Learning Programming</h3>
+                        <p>Build on top of my current stack, delve deeper into algorithms, and write clean, logical code.</p>
+                    </div>
+                    <div class="glass-card goal-card">
+                        <div class="goal-num">04</div>
+                        <h3>Build Real-World Software</h3>
+                        <p>Develop projects that solve actual challenges, keeping modern UX design and code performance at the forefront.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container reveal">
+                <h2 class="section-title">Projects</h2>
+                <div class="glass-card placeholder-card">
+                    <div class="placeholder-icon">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <h3>Projects coming soon</h3>
+                    <p>I'm currently focused on strengthening my fundamentals, preparing for competitive exams, and learning the building blocks of development before building meaningful projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="connect" class="section">
+            <div class="container reveal">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="connect-subtitle">Feel free to explore my links or get in touch via email.</p>
+                <div class="connect-grid">
+                    <a href="https://github.com/RishiOg260" target="_blank" rel="noopener noreferrer" class="glass-card connect-card">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rishi-funde-068221414" target="_blank" rel="noopener noreferrer" class="glass-card connect-card">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://instagram.com/Rishi.funde_" target="_blank" rel="noopener noreferrer" class="glass-card connect-card">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="mailto:rishifunde01@gmail.com" class="glass-card connect-card email-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Send Email</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="back-to-top" aria-label="Back to top" class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Rishi Funde. Built using HTML, CSS, and JavaScript.</p>
+            <p class="footer-note">Uncompromisingly minimalist. Designed and coded with focus.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
