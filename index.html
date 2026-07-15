@@ -3,217 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio of Rishi Funde - Student, programmer, and JEE Advanced 2028 aspirant.">
+    <meta name="description" content="Portfolio of Rishi Funde, a student in India preparing for JEE Advanced 2028 while learning programming.">
+    <meta name="keywords" content="Rishi Funde, student, JEE Advanced 2028, web development, programming, India">
+    <meta name="author" content="Rishi Funde">
     <title>Rishi Funde | Portfolio</title>
     
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%236366f1'/><text x='50' y='62' font-size='42' font-family='Inter, sans-serif' fill='white' text-anchor='middle' font-weight='600'>RF</text></svg>">
+    
+    <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div id="scroll-progress" aria-hidden="true"></div>
-
-    <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
-    <div class="custom-cursor-dot" id="custom-cursor-dot" aria-hidden="true"></div>
-
-    <div id="loader">
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <p class="loader-text">Rishi Funde</p>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">Rishi Funde</div>
+            <div class="loading-subtitle">Student • India</div>
         </div>
     </div>
 
-    <div class="aurora-container" aria-hidden="true">
-        <div class="aurora aurora-1"></div>
-        <div class="aurora aurora-2"></div>
-        <div class="aurora aurora-3"></div>
-    </div>
+    <!-- Scroll Progress Bar -->
+    <div id="progress-bar"></div>
 
-    <header class="navbar">
-        <nav class="nav-container">
-            <a href="#hero" class="nav-logo" aria-label="Rishi Funde Home">RF</a>
-            <ul class="nav-links">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#goals" class="nav-link">Goals</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#connect" class="nav-link-btn">Connect</a></li>
-            </ul>
-            <button class="mobile-nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <!-- Glass Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Rishi Funde</div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-links">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#learning" class="nav-link">Learning</a>
+                <a href="#goals" class="nav-link">Goals</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#connect" class="nav-link">Connect</a>
+            </div>
+            
+            <!-- Mobile Hamburger -->
+            <button id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-        </nav>
-    </header>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#learning" class="nav-link">Learning</a>
+            <a href="#goals" class="nav-link">Goals</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#connect" class="nav-link">Connect</a>
+        </div>
+    </nav>
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="container hero-container reveal">
-                <div class="hero-badge">Student &amp; Aspiring Programmer</div>
-                <h1 class="hero-title">Rishi Funde</h1>
-                <p class="hero-subtitle"> PCM student and jee aspirant mapping out the future of technology while preparing for JEE Advanced 2028.</p>
-                <div class="hero-cta">
-                    <a href="#about" class="btn btn-primary">Discover My Journey</a>
-                    <a href="#connect" class="btn btn-secondary">Get In Touch</a>
+    <!-- Hero Section with Astonishing Particle Animation -->
+    <section id="hero">
+        <canvas id="hero-particles"></canvas>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Rishi Funde</h1>
+                <p class="hero-subtitle">Student • India</p>
+                <p class="hero-description">
+                    Balancing preparation for JEE Advanced 2028 with learning programming 
+                    and building my skills every day.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Explore My Journey</a>
+                    <a href="#connect" class="btn btn-secondary">Connect</a>
                 </div>
             </div>
-            <div class="scroll-down-indicator" aria-hidden="true">
-                <span>Scroll to explore</span>
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about" class="section">
-            <div class="container reveal">
-                <h2 class="section-title">About Me</h2>
-                <div class="glass-card about-card">
-                    <p class="about-text">
-                        Hello! I am Rishi Funde, a PCM student and JEE aspirant passionate about science, technology, and programming. Based on my interest in how software operates, I started self-learning fundamentals of coding to prepare myself for the challenges ahead. 
-                    </p>
-                    <p class="about-text">
-                        Currently, I balance my school studies, competitive exam prep, and personal coding goals. I believe in learning by doing, mastering logical problem-solving, and continuously refining my skill set.
-                    </p>
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-container">
+            <h2 class="section-title">About</h2>
+            <div class="glass-card">
+                <p>I'm Rishi Funde, a student in India. I completed Class 10 with 89.6% and am currently studying PCM through Physics Wallah while preparing for JEE Advanced 2028. At the same time, I am learning programming and improving every day.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="section-container">
+            <h2 class="section-title">Education</h2>
+            <div class="glass-card education-grid">
+                <div class="edu-item">
+                    <div class="edu-label">Class 10</div>
+                    <div class="edu-value">89.6%</div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-label">Current Studies</div>
+                    <div class="edu-value">Physics Wallah (PW) — PCM</div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-label">Upcoming</div>
+                    <div class="edu-value">Preparing for JEE Advanced 2028</div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="education" class="section">
-            <div class="container reveal">
-                <h2 class="section-title">Education</h2>
-                <div class="education-grid">
-                    <div class="glass-card education-card">
-                        <div class="card-icon"><i class="fa-solid fa-school"></i></div>
-                        <span class="education-tag current">Current Academic Journey</span>
-                        <h3>Class 11 (PCM)</h3>
-                        <p class="edu-desc">Focusing on Physics, Chemistry, and Mathematics to build a razor-sharp analytical foundation.</p>
-                    </div>
-
-                    <div class="glass-card education-card">
-                        <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <span class="education-tag success">Completed</span>
-                        <h3>Class 10</h3>
-                        <p class="edu-desc">Achieved an aggregate score of <strong>89.6%</strong>, establishing strong academic fundamentals.</p>
-                    </div>
-
-                    <div class="glass-card education-card">
-                        <div class="card-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
-                        <span class="education-tag prep">JEE Prep</span>
-                        <h3>JEE Advanced 2028</h3>
-                        <p class="edu-desc">Actively preparing for the Joint Entrance Examination (Advanced) at <strong>Physics Wallah (PW)</strong>.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="section">
-            <div class="container reveal">
-                <h2 class="section-title">Skills &amp; Learning</h2>
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-container">
+            <h2 class="section-title">Skills</h2>
+            <div class="glass-card">
                 <div class="skills-grid">
-                    <div class="glass-card skill-group-card">
-                        <h3 class="skill-group-title">Programming Languages</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML</span>
-                            <span class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS</span>
-                            <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
-                        </div>
-                    </div>
-
-                    <div class="glass-card skill-group-card highlight-border">
-                        <h3 class="skill-group-title">Currently Learning</h3>
-                        <div class="skill-tags">
-                            <span class="learning-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
-                            <span class="learning-tag"><i class="fa-solid fa-code"></i> Web Development</span>
-                            <span class="learning-tag"><i class="fa-solid fa-brain"></i> Problem Solving</span>
-                        </div>
-                    </div>
+                    <div class="skill-pill">HTML</div>
+                    <div class="skill-pill">CSS</div>
+                    <div class="skill-pill">Python</div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="goals" class="section">
-            <div class="container reveal">
-                <h2 class="section-title">Future Goals</h2>
-                <div class="goals-timeline">
-                    <div class="glass-card goal-card">
-                        <div class="goal-num">01</div>
-                        <h3>Crack JEE Advanced 2028</h3>
-                        <p>Perform exceptionally in JEE Advanced to gain admission into one of India's premier engineering institutions.</p>
-                    </div>
-                    <div class="glass-card goal-card">
-                        <div class="goal-num">02</div>
-                        <h3>Study Computer Science at IIT Bombay</h3>
-                        <p>Pursue a Bachelor's degree in Computer Science and Engineering from the prestigious IITs.</p>
-                    </div>
-                    <div class="glass-card goal-card">
-                        <div class="goal-num">03</div>
-                        <h3>Keep Learning Programming</h3>
-                        <p>Build on top of my current stack, delve deeper into algorithms, and write clean, logical code.</p>
-                    </div>
-                    <div class="glass-card goal-card">
-                        <div class="goal-num">04</div>
-                        <h3>Build Real-World Software</h3>
-                        <p>Develop projects that solve actual challenges, keeping modern UX design and code performance at the forefront.</p>
-                    </div>
+    <!-- Learning Section -->
+    <section id="learning">
+        <div class="section-container">
+            <h2 class="section-title">Currently Learning</h2>
+            <div class="glass-card">
+                <div class="skills-grid">
+                    <div class="skill-pill">JavaScript</div>
+                    <div class="skill-pill">Web Development</div>
+                    <div class="skill-pill">Problem Solving</div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="projects" class="section">
-            <div class="container reveal">
-                <h2 class="section-title">Projects</h2>
-                <div class="glass-card placeholder-card">
-                    <div class="placeholder-icon">
-                        <i class="fa-solid fa-hourglass-half"></i>
-                    </div>
-                    <h3>Projects coming soon</h3>
-                    <p>I'm currently focused on strengthening my fundamentals, preparing for competitive exams, and learning the building blocks of development before building meaningful projects.</p>
-                </div>
+    <!-- Goals Section -->
+    <section id="goals">
+        <div class="section-container">
+            <h2 class="section-title">Goals</h2>
+            <div class="glass-card">
+                <p>My dream is to study Computer Science at IIT Bombay.</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="connect" class="section">
-            <div class="container reveal">
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="connect-subtitle">Feel free to explore my links or get in touch via email.</p>
-                <div class="connect-grid">
-                    <a href="https://github.com/RishiOg260" target="_blank" rel="noopener noreferrer" class="glass-card connect-card">
-                        <i class="fa-brands fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/rishi-funde-068221414" target="_blank" rel="noopener noreferrer" class="glass-card connect-card">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://instagram.com/Rishi.funde_" target="_blank" rel="noopener noreferrer" class="glass-card connect-card">
-                        <i class="fa-brands fa-instagram"></i>
-                        <span>Instagram</span>
-                    </a>
-                    <a href="mailto:rishifunde01@gmail.com" class="glass-card connect-card email-card">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>Send Email</span>
-                    </a>
-                </div>
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-container">
+            <h2 class="section-title">Projects</h2>
+            <div class="glass-card projects-placeholder">
+                <p>Projects coming soon. I'm currently focusing on learning, improving my programming skills, and building a strong foundation before creating larger projects.</p>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <button id="back-to-top" aria-label="Back to top" class="back-to-top">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    <!-- Connect Section -->
+    <section id="connect">
+        <div class="section-container">
+            <h2 class="section-title">Connect</h2>
+            <div class="glass-card connect-grid">
+                <a href="https://github.com/RishiOg260" target="_blank" rel="noopener" class="connect-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/rishi-funde-068221414" target="_blank" rel="noopener" class="connect-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.064 0-1.14.92-2.064 2.063-2.064 1.14 0 2.064.925 2.064 2.064 0 1.139-.925 2.064-2.064 2.064zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="https://instagram.com/Rishi.funde_" target="_blank" rel="noopener" class="connect-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.667.072 4.947.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.76 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Instagram
+                </a>
+                <a href="mailto:rishifunde01@gmail.com" class="connect-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    Email
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2026 Rishi Funde. Built using HTML, CSS, and JavaScript.</p>
-            <p class="footer-note">Uncompromisingly minimalist. Designed and coded with focus .</p>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 Rishi Funde. All rights reserved.</p>
+            <p>Built with care while learning.</p>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" aria-label="Scroll to top">↑</button>
 
     <script src="script.js"></script>
 </body>
